@@ -1,4 +1,4 @@
-export const PETS = [
+export const CARDS = [
     { id: 1, name: 'text field' },
     { id: 2, name: 'textarea' },
     { id: 3, name: 'select' },
