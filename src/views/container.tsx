@@ -3,9 +3,7 @@ import type { FC } from 'react'
 import { memo } from 'react'
 import { Column, Grid } from '@carbon/react'
 
-import { LeftContainer } from './left-container'
-import { RightContainer } from './right-container'
-import { Canvas } from './canvas'
+import { Canvas, LeftContainer, RightContainer } from '../components/layoutComponents'
 
 export const Container: FC = memo(function Container() {
     return (

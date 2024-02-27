@@ -1,25 +1,13 @@
 import React, { useState } from 'react'
 import { memo } from 'react'
-
-import type { CSSProperties, FC } from 'react'
+import type { FC } from 'react'
 import { useDrop } from 'react-dnd'
-import { ItemTypes } from './elements/ItemTypes'
-import { Card } from './elements/Card'
 
-const style: CSSProperties = {
-    height: '25rem',
-    width: '100%',
-    marginRight: '1.5rem',
-    marginBottom: '1.5rem',
-    color: 'white',
-    padding: '1rem',
-    textAlign: 'center',
-    fontSize: '1rem',
-    lineHeight: 'normal',
-    float: 'left',
-}
+import './canvas.css'
+import { ItemTypes } from '../../../constants/const'
+import Element from '../left-container/element'
 
-export const Canvas: FC = memo(function Canvas() {
+const Canvas: FC = memo(function Canvas() {
     const [basket, setBasket] = useState<any>([])
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: ItemTypes.CARD,
@@ -39,12 +27,13 @@ export const Canvas: FC = memo(function Canvas() {
     }
     return (
         <>
-            <div ref={drop} style={{ ...style, backgroundColor }} data-testid="dustbin">
-                {isActive ? 'Release to drop' : 'Drag a box here'}
+            <div ref={drop} className="canvas-container" style={{ backgroundColor }} data-testid="dustbin">
                 {basket.map((card: any) => (
-                    <Card key={card.id} id={card.id} name={card.name} />
+                    <Element key={card.id} id={card.id} name={card.name} />
                 ))}
             </div>
         </>
     )
 })
+
+export default Canvas
