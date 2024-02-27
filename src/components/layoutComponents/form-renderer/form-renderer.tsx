@@ -10,7 +10,7 @@ const FromRenderer: FC<CarbonFromComponent> = memo(function FromRenderer({ id, n
     if (fieldType == FieldType.Button) {
         renderInput = <Button />
     } else if (fieldType == FieldType.Link) {
-        renderInput = <Link />
+        renderInput = <Link content={name} href="https://www.data-driven-forms.org/editor/live-editor" />
     } else if (fieldType == FieldType.TextInput) {
         renderInput = <TextInput id={id} labelText={name} />
     } else if (fieldType == FieldType.TextArea) {

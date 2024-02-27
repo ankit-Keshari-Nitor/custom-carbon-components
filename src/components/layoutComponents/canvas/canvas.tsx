@@ -20,7 +20,7 @@ const Canvas: FC = memo(function Canvas() {
     }))
 
     const isActive = canDrop && isOver
-    let backgroundColor = '#222'
+    let backgroundColor = 'rgb(233 242 244)'
     if (isActive) {
         backgroundColor = 'darkgreen'
     } else if (canDrop) {

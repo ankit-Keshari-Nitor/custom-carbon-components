@@ -2,14 +2,16 @@ import React from 'react'
 import { Link as CarbonLink, LinkProps } from '@carbon/react'
 
 export interface LinkWrapperProps extends LinkProps {
-    text?: string
+    content?: string
     href?: string
 }
 
-const Link: React.FC<LinkWrapperProps> = ({ content, ...rest }) => {
+const Link: React.FC<LinkWrapperProps> = ({ content, href, ...rest }) => {
     return (
         <div>
-            <CarbonLink {...rest}>{content}</CarbonLink>
+            <CarbonLink {...rest} href={href}>
+                {content}
+            </CarbonLink>
         </div>
     )
 }
