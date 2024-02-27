@@ -3,7 +3,7 @@ import { TextArea as CarbonTextArea } from '@carbon/react'
 import { TextAreaProps } from '@carbon/react/lib/components/TextArea/TextArea'
 
 export interface TextAreaWrapperProps extends TextAreaProps {
-    content: string
+    content?: string
 }
 
 const TextArea: React.FC<TextAreaWrapperProps> = ({ content, ...rest }) => {

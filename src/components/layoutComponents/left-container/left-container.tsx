@@ -8,7 +8,7 @@ const LeftContainer: FC = memo(function LeftContainer() {
     return (
         <div>
             {COMPONENT_MAPPER.map((component) => {
-                return <Element key={component.id} id={component.id} name={component.name} />
+                return <Element key={component.id} id={component.id} name={component.name} fieldType={component.fieldType}/>
             })}
         </div>
     )

@@ -5,7 +5,7 @@ export const ItemTypes = {
 export enum FieldType {
     Button = 'Button',
     Link = 'Link',
-    InputInput = 'InputInput',
+    TextInput = 'TextInput',
     TextArea = 'TextArea',
 }
 
@@ -18,6 +18,6 @@ export interface CarbonFromComponent {
 export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
     { id: 'button', name: 'Button', fieldType: FieldType.Button },
     { id: 'link', name: 'Link', fieldType: FieldType.Link },
-    { id: 'text-input', name: 'Text Input', fieldType: FieldType.InputInput },
+    { id: 'text-input', name: 'Text Input', fieldType: FieldType.TextInput },
     { id: 'textarea', name: 'Text Area', fieldType: FieldType.TextArea },
 ])

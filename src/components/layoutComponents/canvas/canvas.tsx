@@ -6,12 +6,14 @@ import { useDrop } from 'react-dnd'
 import './canvas.css'
 import { ItemTypes } from '../../../constants/const'
 import Element from '../left-container/element'
+import FormRenderer from '../form-renderer'
 
 const Canvas: FC = memo(function Canvas() {
-    const [basket, setBasket] = useState<any>([])
+    const [editor, setEditor] = useState<any>([])
+
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: ItemTypes.ELEMENT,
-        drop: (item) => setBasket((basket: any) => (!basket.includes(item) ? [...basket, item] : basket)),
+        drop: (item) => setEditor((editor: any) => [...editor, item]),
         collect: (monitor) => ({
             isOver: monitor.isOver(),
             canDrop: monitor.canDrop(),
@@ -25,11 +27,12 @@ const Canvas: FC = memo(function Canvas() {
     } else if (canDrop) {
         backgroundColor = 'darkkhaki'
     }
+
     return (
         <>
             <div ref={drop} className="canvas-container" style={{ backgroundColor }} data-testid="dustbin">
-                {basket.map((item: any) => (
-                    <Element key={item.id} id={item.id} name={item.name} />
+                {editor.map((item: any) => (
+                    <FormRenderer key={item.id} id={item.id} name={item.name} fieldType={item.fieldType}/>
                 ))}
             </div>
         </>
