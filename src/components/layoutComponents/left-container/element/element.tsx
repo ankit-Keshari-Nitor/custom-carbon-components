@@ -11,7 +11,7 @@ export interface ElementProps {
 
 const Element: FC<ElementProps> = function Box({ id, name }) {
     const [{ isDragging }, drag] = useDrag(() => ({
-        type: ItemTypes.CARD,
+        type: ItemTypes.ELEMENT,
         item: { id, name },
         collect: (monitor) => ({
             isDragging: monitor.isDragging(),

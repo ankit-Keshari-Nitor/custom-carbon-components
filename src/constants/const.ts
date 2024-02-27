@@ -1,13 +1,6 @@
 export const ItemTypes = {
-    CARD: 'card',
+    ELEMENT: 'element',
 }
-
-export const CARDS = [
-    { id: 1, name: 'text field' },
-    { id: 2, name: 'textarea' },
-    { id: 3, name: 'select' },
-    { id: 4, name: 'checkbox' },
-]
 
 export enum FieldType {
     Button = 'Button',
