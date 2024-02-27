@@ -5,7 +5,6 @@ import { useDrop } from 'react-dnd'
 
 import './canvas.css'
 import { ItemTypes } from '../../../constants/const'
-import Element from '../left-container/element'
 import FormRenderer from '../form-renderer'
 
 const Canvas: FC = memo(function Canvas() {
