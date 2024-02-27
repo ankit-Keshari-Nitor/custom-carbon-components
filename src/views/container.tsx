@@ -8,10 +8,10 @@ import { Canvas, LeftContainer, RightContainer } from '../components/layoutCompo
 export const Container: FC = memo(function Container() {
     return (
         <Grid fullWidth>
-            <Column lg={2} md={2} sm={2}>
+            <Column lg={3} md={2} sm={2}>
                 <LeftContainer />
             </Column>
-            <Column lg={10} md={10} sm={10}>
+            <Column lg={9} md={10} sm={10}>
                 <Canvas />
             </Column>
             <Column lg={4} md={4} sm={4}>

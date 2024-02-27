@@ -7,6 +7,7 @@ export enum FieldType {
     Link = 'Link',
     TextInput = 'TextInput',
     TextArea = 'TextArea',
+    Checkbox = 'Checkbox',
 }
 
 export interface CarbonFromComponent {
@@ -20,4 +21,5 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
     { id: 'link', name: 'Link', fieldType: FieldType.Link },
     { id: 'text-input', name: 'Text Input', fieldType: FieldType.TextInput },
     { id: 'textarea', name: 'Text Area', fieldType: FieldType.TextArea },
+    { id: 'checkbox', name: 'Checkbox', fieldType: FieldType.Checkbox },
 ])
