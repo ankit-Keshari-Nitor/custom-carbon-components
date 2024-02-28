@@ -1,7 +1,16 @@
 import React from 'react'
 import { Key, ReactElement } from 'react'
 import { Button, Checkbox, DatePicker, Link, TextArea, TextInput } from '../components/formComponents/basic-carbon-components'
-import { Information, TextFill } from '@carbon/icons-react'
+import {
+    CloudSatellite,
+    IbmWatsonKnowledgeStudio,
+    IbmWatsonLanguageTranslator,
+    Information,
+    SkipBackOutlineSolid,
+    TextFill,
+    Checkbox as IconCheckbox,
+    CalendarHeatMap,
+} from '@carbon/icons-react'
 
 export const ItemTypes = {
     ELEMENT: 'element',
@@ -32,7 +41,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'Button',
         fieldType: FieldType.Button,
         component: Button,
-        fieldIcon: <TextFill />,
+        fieldIcon: <SkipBackOutlineSolid />,
         tooltip: 'Form Button',
         tooltipIcon: <Information />,
     },
@@ -41,7 +50,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'Link',
         fieldType: FieldType.Link,
         component: Link,
-        fieldIcon: <TextFill />,
+        fieldIcon: <CloudSatellite />,
         tooltip: 'Form Link',
         tooltipIcon: <Information />,
     },
@@ -50,7 +59,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'Text Input',
         fieldType: FieldType.TextInput,
         component: TextInput,
-        fieldIcon: <TextFill />,
+        fieldIcon: <IbmWatsonKnowledgeStudio />,
         tooltip: 'Form Text Input',
         tooltipIcon: <Information />,
     },
@@ -59,7 +68,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'Text Area',
         fieldType: FieldType.TextArea,
         component: TextArea,
-        fieldIcon: <TextFill />,
+        fieldIcon: <IbmWatsonLanguageTranslator />,
         tooltip: 'Form Text Area',
         tooltipIcon: <Information />,
     },
@@ -68,7 +77,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'Checkbox',
         fieldType: FieldType.Checkbox,
         component: Checkbox,
-        fieldIcon: <TextFill />,
+        fieldIcon: <IconCheckbox />,
         tooltip: 'Form Checkbox',
         tooltipIcon: <Information />,
     },
@@ -77,7 +86,7 @@ export const COMPONENT_MAPPER: Readonly<CarbonFromComponent[]> = Object.freeze([
         name: 'DatePicker',
         fieldType: FieldType.DatePicker,
         component: DatePicker,
-        fieldIcon: <TextFill />,
+        fieldIcon: <CalendarHeatMap />,
         tooltip: 'Form DatePicker',
         tooltipIcon: <Information />,
     },
