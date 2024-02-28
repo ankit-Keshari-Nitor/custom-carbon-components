@@ -3,7 +3,6 @@ import { TextInput as CarbonTextInput } from '@carbon/react'
 import { TextInputProps } from '@carbon/react/lib/components/TextInput/TextInput'
 
 export interface TextFieldWrapperProps extends TextInputProps {
-
     isRequired?: boolean
 }
 

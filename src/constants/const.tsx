@@ -26,7 +26,7 @@ export enum FieldType {
 }
 
 export interface CarbonFromComponent {
-    id: Key | null | undefined
+    id: string
     name: string
     fieldType: FieldType
     component?: React.ElementType
